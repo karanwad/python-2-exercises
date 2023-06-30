@@ -11,6 +11,9 @@ people_list = [
     {'name': 'charlie', 'age': 15, 'weight': 120, 'sex': 'female', 'id': 3},
 ]
 ```
+people_list.sort({key=lambda p: p['age']})
+print(people_list)
+
 
 Create a function called `sort_people()` that accepts the following arguments:
 - A list of people
@@ -49,7 +52,8 @@ people_list = [
     {'name': 'charlie', 'age': 15, 'weight': 120, 'sex': 'female', 'id': 3},
 ]
 ```
-
+<!-- new_list = list(filter(lambda p: p['age'] > 15, people_list))
+8 print(new_list) -->
 Create a function called `filter_males()` that accepts the following arguments:
 - A list of people
 
@@ -82,7 +86,8 @@ people_list = [
     {'id': 3, 'name': 'charlie', 'weight_kg': 80, 'height_meters': 1.8},
 ]
 ```
-
+<!-- new_list = list(map(lambda p: p, people_list))
+8 print(new_list) -->
 Create a function called `calc_bmi()` that accepts this list and calculates the BMI (Body Mass Index) for
 each person.  The formula for BMI is:  BMI = weight/height<sup>2</sup>.  This can be expressed in python
 using this syntax: `round(weight / height ** 2, 1)`.
@@ -108,6 +113,12 @@ Output:
 
 # Ex. 4 List Comprehension
 Given the following list:
+
+<!-- new_list = [p['name'] for p in people_list]
+7 print(new_list) -->
+
+ <!-- new_list = [p['name'] for p in people_list if p['age'] > 15 ]
+7 print(new_list) -->
 
 ```python
 people_list = [
